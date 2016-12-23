@@ -25,7 +25,7 @@ SECRET_KEY = 'xd72_ogr_2pj#$r(ytqzevk_$#!a3%pa!ja0rtyuqcjrs*3h@y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['freeleito.pythonanywhere.com']
+ALLOWED_HOSTS = ['freeleito.pythonanywhere.com','http://127.0.0.1:8000/', '127.0.0.1']
 
 
 # Application definition
