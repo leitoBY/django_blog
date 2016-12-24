@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Shy programmer's blog</title>
+    <title>Curious programmer's blog</title>
 </head>
 <body>
     <div>
-        <h1><a href=''>little blog</a></h1>
+        <h1><a href=''>Curious programmer's blog</a></h1>
     </div>
 
-    <div>
-        <p>published: 24.12.2016, 02:03</p>
-        <h2><a href=''>first post</a></h2>
-        <p>Hello there. My name is Alex and here i'm trying to make simple site using python and django framework. Let's see!</p>
-        <p>I am 27 years old and i'm programmer in a small company. I like my job, i love programming, so i decided to learn some technologies at free time. Something new is always interesting for me. Glad to see you at my blog, hope you will enjoy :)</p>
-        <p>Here i will post my results at learning or any interesting news or thoughts. And here we go...</p>
-    </div>
-
-    <div>
-        <p>published: 24.12.2016, 02:13</p>
-        <h1><a href=''>second post</a></h1>
-        <p>I'm folowing one of the million of tutorials in web, now i'm repeating html. See you later =) </p>
-    </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }} </p>
+            <h2><a href=''>{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
 
 </body>
